@@ -12,7 +12,3 @@ def instrucciones(self):
     miContext = Context()
     textDoc = templ_instrucciones.render(miContext)
     return HttpResponse(textDoc)
-'''
-def ingresoFamiliar(self,texto):
-    texto = texto.split(",")
-    '''
