@@ -6,9 +6,13 @@ from django.template import Template, Context
 #-------------------------------------
 # Create your views here.
 def instrucciones(self):
-    miHtml = open("C:/Users/Usr/Documents/GitHub/mvt_agugliuzza/ProyectoFamilia/templates/template_familiares.html")
+    miHtml = open("C:/Users/Usr/Documents/GitHub/mvt_agugliuzza/ProyectoFamilia/Templates/template_002.html")
     templ_instrucciones = Template(miHtml.read())
     miHtml.close()
     miContext = Context()
     textDoc = templ_instrucciones.render(miContext)
     return HttpResponse(textDoc)
+'''
+def ingresoFamiliar(self,texto):
+    texto = texto.split(",")
+    '''
