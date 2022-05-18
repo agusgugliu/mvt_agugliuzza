@@ -12,3 +12,12 @@ def instrucciones(self):
     miContext = Context()
     textDoc = templ_instrucciones.render(miContext)
     return HttpResponse(textDoc)
+
+def ingresoFamiliar(self,texto):
+    texto = texto.replace("__"," ") # <-- hacemos que los guiones bajos los transforme en espacios
+    lista = texto.split(",") # <-- generamos la lista con los campos
+    # ahora separo todos los diferentes campos:
+    nombre = texto[0].title()
+    apellido = texto[1].title()
+    fecha_nacimiento = texto[2]
+    nro_documento = texto[3]
