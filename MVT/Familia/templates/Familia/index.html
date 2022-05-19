@@ -11,7 +11,8 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <h1>Miembros de Mi Familia</h1>
+        <img src="https://jobs.coderhouse.com/assets/logos_coderhouse.png" alt="CoderHouse Logo" width="380" height="125">
+        <h1>MIEMBROS DE LA FAMILIA</h1>
         {% url 'agregar' as agregar_url %}
         {% bootstrap_button "Agregar" size="sm" button_class="btn-primary" button_type="link" href=agregar_url %}
 
@@ -47,7 +48,7 @@
             {% endfor %}
         </table>
         {% else %}
-            <p>No tienes familiares cargados</p>
+            <p style="color:red">No tienes familiares cargados</style></p>
         {% endif %}
       </div>
     </div>
