@@ -1,2 +1,6 @@
 from django.urls import path
-from APP_Familia import views
+from APP_Familia.views import index
+
+urlpatterns = [
+    path('index/', index),
+]
