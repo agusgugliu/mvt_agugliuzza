@@ -1,0 +1,32 @@
+{% load bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+
+<div class="container">
+   <div class="row">
+     <div class="col">
+      <h1>CARGAR UN FAMILIAR</h1>
+     </div>
+     </div>
+     <dov class="row">
+     <div class="col">
+      <form action="/familia/agregar/" method="post">
+         {% csrf_token %} 
+         {% bootstrap_form_errors form type='non_fields' %}
+         {% bootstrap_field form.nombre layout='horizontal' size='sm' %} 
+         {% bootstrap_field form.apellido layout='horizontal' size='sm' %} 
+         {% bootstrap_field form.email layout='horizontal' size='sm' %} 
+         {% bootstrap_field form.documento layout='horizontal' size='sm' %} 
+         {% bootstrap_field form.fecha_nacimiento layout='horizontal' size='sm' %} 
+         {% bootstrap_button "Guardar" button_type="submit" button_class="btn-primary" size="sm"%}
+      </form>
+     </div>
+   </div>
+ </div>
+ 
