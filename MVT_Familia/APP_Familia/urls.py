@@ -1,6 +1,9 @@
 from django.urls import path
-from APP_Familia.views import index
+from APP_Familia import views
+
 
 urlpatterns = [
-    path('index/', index),
+    path('', views.index, name="index"),
+    path('agregar/', views.agregar, name="agregar"),
+    path('borrar/<identificador>', views.borrar, name="borrar")
 ]
